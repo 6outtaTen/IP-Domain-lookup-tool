@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="984.0" prefWidth="1400" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Label layoutX="397.0" layoutY="40.0" text="Look up an IP address or domain name">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="29.0" />
+         </font></Label>
+      <Text fill="#726e6e" layoutX="519.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leave the field empty to get your own IP information">
+         <font>
+            <Font size="11.0" />
+         </font></Text>
+      <TextField fx:id="input" layoutX="448.0" layoutY="98.0" onAction="#searchInit" prefHeight="26.0" prefWidth="399.0" promptText="8.8.8.8 // google.com" />
+      <Button fx:id="search" layoutX="817.0" layoutY="102.0" minHeight="19" minWidth="26.0" mnemonicParsing="false" onAction="#lookup" prefHeight="22.0" prefWidth="22.0" />
+      <Rectangle fx:id="infoRect" arcHeight="5.0" arcWidth="5.0" fill="f7f3ed" height="696.0" layoutX="760.0" layoutY="201.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="628.0" />
+      
+      <Label fx:id="countryLabel" layoutX="817.0" layoutY="287.0" text="Country" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      <Label fx:id="countryInfo" layoutX="1097.0" layoutY="287.0" text="Label" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      
+      
+      <Label fx:id="regionLabel" layoutX="817.0" layoutY="377.0" text="Region" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      <Label fx:id="regionInfo" layoutX="1097.0" layoutY="377.0" text="Label" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      
+      <Label fx:id="cityLabel" layoutX="817.0" layoutY="467.0" text="City" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      <Label fx:id="cityInfo" layoutX="1097.0" layoutY="467.0" text="Label" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      
+      <Label fx:id="districtLabel" layoutX="817.0" layoutY="537.0" text="District" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      <Label fx:id="districtInfo" layoutX="1097.0" layoutY="537.0" text="Label" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      
+      <Label fx:id="timezoneLabel" layoutX="817.0" layoutY="627.0" text="Timezone" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      <Label fx:id="timezoneInfo" layoutX="1097.0" layoutY="627.0" text="Label" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      
+      <Label fx:id="ispLabel" layoutX="817.0" layoutY="717.0" text="ISP (Internet Service Provider)" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      <Label fx:id="ispInfo" layoutX="1097.0" layoutY="717.0" text="Label" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      
+      <Label fx:id="orgLabel" layoutX="817.0" layoutY="807.0" text="Organization" visible="false">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      <Label fx:id="orgInfo" layoutX="1097.0" layoutY="807.0" maxWidth="200" text="Label" visible="false" wrapText="true">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="18.0" />
+         </font></Label>
+      <ChoiceBox fx:id="mapChoice" layoutX="179.0" layoutY="99.0" prefHeight="26.0" prefWidth="156.0">
+	  	 <items>
+	        <FXCollections fx:factory="observableArrayList">
+	        </FXCollections>
+	     </items>
+      </ChoiceBox>
+      <Label layoutX="21.0" layoutY="97.0" text="Select a map">
+         <font>
+            <Font name="Malgun Gothic Semilight" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="97.0" fitWidth="92.0" layoutX="1235.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@application/github-logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="githubButton" layoutX="1226.0" layoutY="64.0" onAction="#openGitHub" prefHeight="86.0" prefWidth="103.0">
+	  </Button>
+   </children>
+</AnchorPane>

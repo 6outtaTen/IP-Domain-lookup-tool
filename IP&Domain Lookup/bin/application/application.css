@@ -1,0 +1,37 @@
+.root {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+#container {
+	-fx-background-color: F8F0E5;
+}
+
+#input {
+	-fx-border-color: black;
+	-fx-border-radius: 6px;
+	-fx-border-width: 2.5px;
+	-fx-prompt-text-fill: gray;
+}
+
+#search {
+	-fx-border-color: transparent;
+	-fx-background-color: white;
+	-fx-border-radius: 1px;
+	-fx-border-width: 2.5px;
+	-fx-background-image: url('search-icon.png');
+	-fx-background-repeat: no-repeat;
+    -fx-background-position: right 4px center; 
+    -fx-background-size: 16px 16px; 
+    -fx-padding: 5px 25px 5px 5px;
+}
+
+#githubButton {
+	-fx-background-image: url('github-logo.png');
+	-fx-background-color: transparent;
+	-fx-border-color: transparent;
+}
+
+#mapChoice {
+	-fx-background-color: white;
+}
